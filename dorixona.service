@@ -1,0 +1,15 @@
+[Unit]
+Description=AIogram Telegram Bot
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/dorixona_hisoblovchi-bot
+ExecStart=/home/dorixona_hisoblovchi-bot/myenv/bin/python /home/dorixona_hisoblovchi-bot/bot.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/home/dorixona_hisoblovchi-bot/bot.log
+StandardError=append:/home/dorixona_hisoblovchi-bot/error.log
+
+[Install]
+WantedBy=multi-user.target
