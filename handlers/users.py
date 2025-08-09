@@ -73,3 +73,4 @@ async def f(message: Message, state: FSMContext):
 
         await message.answer_document(FSInputFile("hisobot.xlsx"), caption=f"Hisobot {apteka} {message.date.date()}", reply_markup=hisobot_btn)
         await message.bot.send_document(ADMIN, FSInputFile("hisobot.xlsx"), caption=f"Hisobot {apteka} {message.date.date()}", reply_markup=hisobot_btn)
+        await state.clear()
